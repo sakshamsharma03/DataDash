@@ -1,23 +1,25 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const DataSchema = new mongoose.Schema({
-    "end_year": {String,defalt:''},
-        "intensity": Number,
-        "sector": String,
-        "topic": String,
-        "insight": String,
-        "url": String,
-        "region": String,
-        "start_year": String,
-        "impact": String,
-        "added": Date,
-        "published": Date,
-        "country":String,
-        "relevance": Number,
-        "pestle": String,
-        "source": String,
-        "title": String,
-        "likelihood": Number
-});;
+const dataSchema = new mongoose.Schema({
+  end_year: { type: String, default: '' },
+  intensity: { type: Number,default: '' },
+  sector: { type: String,default: '' },
+  topic: { type: String, default:''},
+  insight: { type: String,default: ''},
+  url: { type: String,default: '' },
+  region: { type: String,default: ''},
+  start_year: { type: String, default: '' },
+  impact: { type: String, default: '' },
+  added: { type: Date,default: ''},
+  published: { type: Date,default: ''},
+  country: { type: String,default: '' },
+  relevance: { type: Number,default: '' },
+  pestle: { type: String,default: '' },
+  source: { type: String,default: '' },
+  title: { type: String,default: '' },
+  likelihood: { type: Number,default: '' }
+});
 
-export const DataModel = mongoose.model("DataModel",DataSchema);
+const DataModel = mongoose.model('DataModel', dataSchema);
+
+export default DataModel;
